@@ -515,13 +515,13 @@ class Program
                                         {
                                             for(int itr = 0; itr < filteringStatements.Variables.cutOutDataFromNewArray.Count; itr++)
                                             {
-                                                массив.Add(filteringStatements.Variables.cutOutDataFromNewArray[i];
+                                                crossingOfDates.Add(filteringStatements.Variables.cutOutDataFromNewArray[i];
                                             }
-                                            if( != 0)
+                                            if(crossingOfDates != 0)
                                             {
-                                                for(int itr = 0; itr < массив.Count; itr++)
+                                                for(int itr = 0; itr < crossingOfDates.Count; itr++)
                                                 {
-                                                    filteringStatements.Variables.arrayBuhFromDataBase.Add(массив[itr]);
+                                                    filteringStatements.Variables.arrayBuhFromDataBase.Add([crossingOfDates[itr]);
                                                 {
                                             }
                                         }
@@ -529,7 +529,7 @@ class Program
                                         {
                                             for(int itr = 0; itr < filteringStatements.Variables.cutOutDataFromNewArray.Count; itr++)
                                             {
-                                                массив.Add(filteringStatements.Variables.cutOutDataFromNewArray[i];
+                                                noCrossingOfDates.Add(filteringStatements.Variables.cutOutDataFromNewArray[i];
                                             }
                                         }
                                     }
