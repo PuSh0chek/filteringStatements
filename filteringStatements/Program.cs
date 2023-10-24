@@ -443,20 +443,102 @@ class Program
                                                 filteringStatements.Variables.cutOutDataFromNewArray.RemoveRange(startIterationElementDocument, limitOfIterationElementDocument);
                                             }
                                         }
+                                        
                                         // Сравниваем элементы массивов //
                                         // Если они совпадают о дате, то я заливаю новый элемент вресто старого после чего отчищаю их //
                                         // Если они не совпадают, то я заливаю их в новый массив, отчищаю два массива для обрезки и после всей проверки в самом конце заливаю в главный массив //
-                                        
+                                        if(filteringStatements.Variables.cutOutDataFromNewArray[1] == filteringStatements.Variables.cutOutDataFromOldArray[1])
+                                        {
+                                            for(int itr = 0; itr < filteringStatements.Variables.cutOutDataFromNewArray.Count; itr++)
+                                            {
+                                                массив.Add(filteringStatements.Variables.cutOutDataFromNewArray[i];
+                                            }
+                                            if( != 0)
+                                            {
+                                                for(int itr = 0; itr < массив.Count; itr++)
+                                                {
+                                                    filteringStatements.Variables.arrayBuhFromDataBase.Add(массив[itr]);
+                                                {
+                                            }
+                                        }
+                                        else
+                                        {
+                                            for(int itr = 0; itr < filteringStatements.Variables.cutOutDataFromNewArray.Count; itr++)
+                                            {
+                                                массив.Add(filteringStatements.Variables.cutOutDataFromNewArray[i];
+                                            }
+                                        }
+                                    }
+                                }
+                                if(массив > 7)
+                                {
+                                    for(int itr = 0; itr < массив.Count; itr++)
+                                    {
+                                        filteringStatements.Variables.arrayBuhFromDataBase.Add(массив[itr]);
                                     }
                                 }
                             }
-                            else
+                            if(filteringStatements.Variables.arrayOfFilteredData.Count > filteringStatements.Variables.arrayBuhFromDataBase.Count)
                             {
-                                for (int el = 1; el < filteringStatements.Variables.arrayOfFilteredData.Count; el += 7)
+                                for (int adb = 0; adb < filteringStatements.Variables.arrayBuhFromDataBase.Count; adb += 7)
                                 {
-                                    if (Convert.ToDateTime(filteringStatements.Variables.cutOutDataFromNewArray[1]).ToString() == Convert.ToDateTime(filteringStatements.Variables.cutOutDataFromOldArray[1]).ToString())
+                                    for (int ad = 0; adb < filteringStatements.Variables.arrayOfFilteredData.Count; ad += 7)
                                     {
+                                        // Обработка массива из БД //
+                                        for (int iterationOfElementDB = startIterationElementDB; iterationOfElementDB < limitOfIterationElementDB; iterationOfElementDB++)
+                                        {
+                                            // Заливаем элемент в массив //
+                                            filteringStatements.Variables.cutOutDataFromOldArray.Add(filteringStatements.Variables.arrayBuhFromDataBase[iterationOfElementDB]);
+                                            if (iterationOfElementDB == limitOfIterationElementDB)
+                                            {
+                                                // Вырезаем элемент из родительского массива //
+                                                filteringStatements.Variables.cutOutDataFromOldArray.RemoveRange(startIterationElementDB, limitOfIterationElementDB);
+                                            }
+                                        }
 
+                                        // Обработка массива из файла //
+                                        for (int iterationOfElementDocument = startIterationElementDocument; iterationOfElementDocument < limitOfIterationElementDocument; iterationOfElementDocument++)
+                                        {
+                                            // Заливаем элемент в массив //
+                                            filteringStatements.Variables.cutOutDataFromNewArray.Add(filteringStatements.Variables.arrayOfFilteredData[iterationOfElementDocument]);
+                                            if (iterationOfElementDocument == limitOfIterationElementDocument)
+                                            {
+                                                // Вырезаем элемент из родительского массива //
+                                                filteringStatements.Variables.cutOutDataFromNewArray.RemoveRange(startIterationElementDocument, limitOfIterationElementDocument);
+                                            }
+                                        }
+                                        
+                                        // Сравниваем элементы массивов //
+                                        // Если они совпадают о дате, то я заливаю новый элемент вресто старого после чего отчищаю их //
+                                        // Если они не совпадают, то я заливаю их в новый массив, отчищаю два массива для обрезки и после всей проверки в самом конце заливаю в главный массив //
+                                        if(filteringStatements.Variables.cutOutDataFromNewArray[1] == filteringStatements.Variables.cutOutDataFromOldArray[1])
+                                        {
+                                            for(int itr = 0; itr < filteringStatements.Variables.cutOutDataFromNewArray.Count; itr++)
+                                            {
+                                                массив.Add(filteringStatements.Variables.cutOutDataFromNewArray[i];
+                                            }
+                                            if( != 0)
+                                            {
+                                                for(int itr = 0; itr < массив.Count; itr++)
+                                                {
+                                                    filteringStatements.Variables.arrayBuhFromDataBase.Add(массив[itr]);
+                                                {
+                                            }
+                                        }
+                                        else
+                                        {
+                                            for(int itr = 0; itr < filteringStatements.Variables.cutOutDataFromNewArray.Count; itr++)
+                                            {
+                                                массив.Add(filteringStatements.Variables.cutOutDataFromNewArray[i];
+                                            }
+                                        }
+                                    }
+                                }
+                                if(массив > 7)
+                                {
+                                    for(int itr = 0; itr < массив.Count; itr++)
+                                    {
+                                        filteringStatements.Variables.arrayBuhFromDataBase.Add(массив[itr]);
                                     }
                                 }
                             }
