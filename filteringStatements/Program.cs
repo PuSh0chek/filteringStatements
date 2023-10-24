@@ -1,4 +1,4 @@
-﻿namespace FilterStatements;
+namespace FilterStatements;
 using System;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -443,6 +443,10 @@ class Program
                                                 filteringStatements.Variables.cutOutDataFromNewArray.RemoveRange(startIterationElementDocument, limitOfIterationElementDocument);
                                             }
                                         }
+                                        // Сравниваем элементы массивов //
+                                        // Если они совпадают о дате, то я заливаю новый элемент вресто старого после чего отчищаю их //
+                                        // Если они не совпадают, то я заливаю их в новый массив, отчищаю два массива для обрезки и после всей проверки в самом конце заливаю в главный массив //
+                                        
                                     }
                                 }
                             }
