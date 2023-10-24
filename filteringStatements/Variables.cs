@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -64,6 +64,12 @@ namespace filteringStatements
         // Массив с вырезанными данными из Нового массива(из ДОКУМЕНТА) //
         public static List<string> cutOutDataFromNewArray = new List<string>() { };
 
+        // Массив для хранения элементов с пересеченными датами //
+        public static List<string> crossingOfDates = new List<string>() { };
+
+        // Массив с для хранения элеметов без пересесения дат//
+        public static List<string> noCrossingOfDates = new List<string>() { };
+        
         // РАБОТА С ЦИКЛАМИ //
         // Счетчик количества проходов фильтром по массиву с ошибками //
         public int counter = 0;
