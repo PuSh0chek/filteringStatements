@@ -67,7 +67,7 @@ namespace filteringStatements
 
         // РАБОТА С СЕРВЕРОМ //
         // Данные для подключения к серверу //
-        public static string connectionString = "Data Source= rvdk-svr-6091, 1500;Initial Catalog= TechConditions;Integrated Security=SSPI;";
+        public static string connectionString = "";
 
         // Запросы к таблицам //
         public static string queryTableBuh = "INSERT INTO buh2 (dog, datadog, dt, kt, summ, datepl, text) VALUES (@dog, @datadog, @dt, @kt, @summ, @datepl, @text)";
