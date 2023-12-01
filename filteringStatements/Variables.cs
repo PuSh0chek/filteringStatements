@@ -70,8 +70,8 @@ namespace filteringStatements
         public static string connectionString = "";
 
         // Запросы к таблицам //
-        public static string queryTableBuh = "INSERT INTO buh2 (dog, datadog, dt, kt, summ, datepl, text) VALUES (@dog, @datadog, @dt, @kt, @summ, @datepl, @text)";
-        public static string queryTableTrash = "INSERT INTO trash2 (dog, datadog, dt, kt, summ, datepl, text) VALUES (@dog, @datadog, @dt, @kt, @summ, @datepl, @text)";
+        public static string queryTableBuh = "";
+        public static string queryTableTrash = "";
 
         public static string tableBuh = "buh2";
         public static string tableTrash = "trash2";
