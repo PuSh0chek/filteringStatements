@@ -11,7 +11,6 @@ using filteringStatements;
 using FilterStatements;
 using Microsoft.VisualBasic;
 using OfficeOpenXml;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace filteringStatements
 {
