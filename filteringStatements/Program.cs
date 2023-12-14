@@ -86,34 +86,7 @@ class Program
 
                                 if (clippingNumberOfEptyKt.Value == null || clippingNumberOfEptyKt.Value == "   " || clippingNumberOfEptyKt.Value == " " || clippingNumberOfEptyKt.Value == "" || clippingNumberOfEptyDt.Value == "" || clippingNumberOfEptyDt.Value == " " || clippingNumberOfEptyDt.Value == "   " || clippingNumberOfEptyDt.Value == null || clippingDateOfEptyDt.Value == "" || clippingDateOfEptyDt.Value == " " || clippingDateOfEptyDt.Value == "   " || clippingDateOfEptyDt.Value == null)
                                 {
-                                    if(clippingNumberOfEptyKt != null || clippingNumberOfEptyDt != null)
-                                    {
-                                        if (clippingNumberOfEptyKt.Value != "" && clippingNumberOfEptyDt.Value == "")
-                                        {
-                                            // Добавляем в массив (ОТРИЦАТЕЛЬНЫЙ ДЕБЕТ) элемент не прошедший фильтрацию //
-                                            WorkThisContent.LoadElementInArrayOfErrors(-(filteringStatements.Variables.number), eptyPeriod, eptyDt, eptyKt, eptyDebet, eptyDebetSum, eptyKredit, eptyKreditSum);
-
-                                            // Заливаем элемент в объект (ПОЛОЖИТЕЛЬНЫЙ ДЕБЕТ) с валидными данными //
-                                            WorkThisContent.LoadElementInArrayOfContent(filteringStatements.Variables.number, eptyPeriod, eptyKt, clippingNumberOfEptyKt, clippingDateOfEptyKt, eptyDebet, eptyDebetSum, eptyKredit, eptyKreditSum);
-                                        }
-                                        else if (clippingNumberOfEptyKt.Value == "" && clippingNumberOfEptyDt.Value != "")
-                                        {
-                                            // Добавляем в массив (ПОЛОЖИТЕЛЬНЫЙ ДЕБЕТ) элемент не прошедший фильтрацию //
-                                            WorkThisContent.LoadElementInArrayOfErrors(filteringStatements.Variables.number, eptyPeriod, eptyKt, eptyKt, eptyDebet, eptyDebetSum, eptyKredit, eptyKreditSum);
-
-                                            // Заливаем элемент в объект (ОТРИЦАТЕЛЬНЫЙ ДЕБЕТ) с валидными данными //
-                                            WorkThisContent.LoadElementInArrayOfContent(-(filteringStatements.Variables.number), eptyPeriod, eptyDt, clippingNumberOfEptyDt, clippingDateOfEptyDt, eptyDebet, eptyDebetSum, eptyKredit, eptyKreditSum);
-                                        }
-                                        else
-                                        {
-                                            // Добавляем в массив (ОТРИЦАТЕЛЬНЫЙ ДЕБЕТ) элемент не прошедший фильтрацию //
-                                            WorkThisContent.LoadElementInArrayOfErrors(-(filteringStatements.Variables.number), eptyPeriod, eptyDt, eptyKt, eptyDebet, eptyDebetSum, eptyKredit, eptyKreditSum);
-
-                                            // Добавляем в массив (ПОЛОЖИТЕЛЬНЫЙ ДЕБЕТ) элемент не прошедший фильтрацию //
-                                            WorkThisContent.LoadElementInArrayOfErrors(filteringStatements.Variables.number, eptyPeriod, eptyDt, eptyKt, eptyDebet, eptyDebetSum, eptyKredit, eptyKreditSum);
-                                        }
-                                    }
-                                    else if (clippingNumberOfEptyKt.Value != "" && clippingNumberOfEptyDt.Value == "")
+                                    if (clippingNumberOfEptyKt.Value != "" && clippingNumberOfEptyDt.Value == "")
                                     {
                                         // Добавляем в массив (ОТРИЦАТЕЛЬНЫЙ ДЕБЕТ) элемент не прошедший фильтрацию //
                                         WorkThisContent.LoadElementInArrayOfErrors(-(filteringStatements.Variables.number), eptyPeriod, eptyDt, eptyKt, eptyDebet, eptyDebetSum, eptyKredit, eptyKreditSum);
