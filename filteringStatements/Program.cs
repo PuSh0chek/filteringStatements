@@ -27,7 +27,7 @@ class Program
         try
         {
             // Блок работы с файлом //
-            using (ExcelPackage package = new ExcelPackage(new FileInfo(filteringStatements.Variables.path)))
+            using (ExcelPackage package = new ExcelPackage(new FileInfo(Variables.path)))
             {
                 // Получаем доступ к рабочему листу в книге
                 ExcelWorksheet worksheet = package.Workbook.Worksheets.First();

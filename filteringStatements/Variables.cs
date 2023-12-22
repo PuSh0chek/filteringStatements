@@ -10,7 +10,7 @@ namespace filteringStatements
     public class Variables
     {
         // Путь к файлу с данными//
-        public static string path = "E:\\filteringStatements\\filteringStatements\\MainNew3.xlsx";
+        public static string path = "document.xlsx";
 
         // РЕГУЛЯРНЫЕ ВЫРАЖЕНИЯ //
         // Первая проверка(стандарт) //
@@ -67,13 +67,13 @@ namespace filteringStatements
 
         // РАБОТА С СЕРВЕРОМ //
         // Данные для подключения к серверу //
-        public static string connectionString = "";
+        public static string connectionString = "Data Source = rvdk-svr-6091, 1500;Initial Catalog= TechConditions;Integrated Security=SSPI;";
 
         // Запросы к таблицам //
-        public static string queryTableBuh = "";
-        public static string queryTableTrash = "";
+        public static string queryTableBuh = "INSERT INTO buh (dog, datadog, dt, kt, summ, datepl, text) VALUES (@dog, @datadog, @dt, @kt, @summ, @datepl, @text)";
+        public static string queryTableTrash = "INSERT INTO trash (dog, datadog, dt, kt, summ, datepl, text) VALUES (@dog, @datadog, @dt, @kt, @summ, @datepl, @text)";
 
-        public static string tableBuh = "buh2";
-        public static string tableTrash = "trash2";
+        public static string tableBuh = "buh";
+        public static string tableTrash = "trash";
     }
 }
